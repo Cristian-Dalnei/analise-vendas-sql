@@ -1,52 +1,48 @@
-projeto-analise-vendas/
-│
-├── queries/
-│   ├── 01_faturamento_mensal.sql
-│   ├── 02_ticket_medio.sql
-│   ├── 03_clientes_recorrentes.sql
-│   ├── 04_top_clientes_mes.sql
-│   ├── 05_top_produtos_mes.sql
-│   ├── 06_receita_acumulada.sql
-│
-├── README.md
+📌 Descrição do Projeto
 
+Projeto de análise de dados utilizando SQL com foco em métricas de vendas, comportamento de clientes e performance de produtos.
 
-Banco usado para realização dos exercícios
-ESTADO
-id_estado(PK)
+O objetivo é transformar dados brutos em informações úteis para tomada de decisão.
+
+🛠️ Tecnologias Utilizadas
+PostgreSQL
+SQL
+
+🗄️ Estrutura do Banco de Dados
+
+📍 Tabela: estado
+id_estado (PK)
 sigla
 
-CLIENTE
-id_cliente(PK)
-id_estado(FK)
+📍 Tabela: cliente
+id_cliente (PK)
+id_estado (FK)
 nome_cliente
 sexo
 nascimento
 
-PEDIDO
-id_pedido(PK)
-id_cliente(FK)
+📍 Tabela: pedido
+id_pedido (PK)
+id_cliente (FK)
 data_pedido
 
-PRODUTO
-id_produto(FK)
+📍 Tabela: produto
+id_produto (PK)
 nome_produto
 preco
 categoria
 
-ITEM_PEDIDO
-id_item_pedido(PK)
-id_pedido(FK)
-id_produto(FK)
+📍 Tabela: item_pedido
+id_item_pedido (PK)
+id_pedido (FK)
+id_produto (FK)
 preco_venda
 quantidade
 
-
-
-
-
-
-
-
-
-
+📊 Métricas Analisadas
+Faturamento mensal
+Ticket médio por mês
+Clientes recorrentes
+Top 3 clientes por mês
+Produtos mais vendidos por categoria
+Faturamento acumulado
